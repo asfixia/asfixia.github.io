@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-br">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Comparação de imóveis: Mercado X Leilão</title>
+    <link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/start.css">
+    <script type="text/javascript" src="vendors/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="vendors/js/d3.min.js"></script>
+    <script type="text/javascript" src="assets/js/start.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="btn-group btn-breadcrumb">
+            <a href="#home" class="btn btn-default refactive">Home</a>
+            <a href="#mapa" class="btn btn-default">Mapa interativo</a>
+            <a href="#cenario" class="btn btn-default">Cenário imobiliario atual</a>
+            <a href="#dadosdist" class="btn btn-default">Cálculo de distância</a>
+            <!-- <a href="#cenario" class="btn btn-default">Cenário</a> !-->
+            <a href="#table" class="btn btn-default">Lista de imóveis</a>
+        </div>
+    </div>
+</nav>
+<section id="home" class="noheight">
+    <div></div>
+</section>
+<section id="mapa">
+    <iframe src="http://maps.csr.ufmg.br/calculator/?lang=eng&queryid=43&map=&extent=-44.48439018610784,-20.10815436776413,-43.56085197810048,-19.723389447108318&tools=helpintro,layerchooser,zoomextent,customzoom,hovershowlegend&options=scale,startopened,hidestylechooser,enablequeries&visiblelayers=-1&zoomlevels=20"></iframe>
+    <!-- <img class="fullwidth" src="assets/img/imovel.jpg"> !-->
+</section>
+<div class="container">
+    <section id="cenario">
+        <h2>Cenário imobiliário atual</h2>
+        <div>
+            <img src="assets/img/cenario.png" class="imgtxt">
+            <p>O Brasil vive em um tempo de crise no setor imobiliário e com o altos níveis de desemprego no país muitas
+                pessoas não estão conseguindo pagar os seus imóveis juntamente com a alta taxa de distratos imobiliários
+                as incorporadoras são pressionadas a tomar os apartamentos devedores. Com o aumento do prejuízo das
+                incorporadoras uma das medidas tomadas é a realização do leilão extrajudicial.<br>
+                “As incorporadoras listadas em bolsa tiveram prejuízo líquido consolidado de R$ 7,46 bilhões no ano
+                passado, o pior resultado desde o início da abertura de capital do setor em 2007. Distratos, provisões
+                para contingências e baixas contábeis resultantes de reduções de preços de apartamentos e de terrenos
+                fizeram com que a perda setorial crescesse mais de quatro vezes em relação ao prejuízo de R$ 1,786
+                bilhão de 2015.”<br>
+                Com a crise atual e a supervalorização dos imóveis ocorrida nos ultimos 5 anos, existe uma enorme
+                oferta de apartamentos e uma sintomática baixa na procura que resulta na redução dos preços dos imóveis
+                que em alguns casos chegam a desvalorização do preço nominal em algumas regiões, e essa ferramenta
+                permite comparar os valores dos imóveis.
+            </p>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section id="dadosdist">
+        <h2>Cálculo de distância dos imóveis aos estabelecimentos</h2>
+        <div>
+            <img src="assets/img/estabelecimentos.png" class="imgtxt">
+            <p>Dados do orgão regulador do "Imposto sobre serviço"(ISS) para todos estabelecimentos de Belo Horizonte.
+                Para cada ponto do mapa calculou-se a menor distância a um dos estabelecimentos de interesse. Com isso
+                foi gerado um mapa de distância para cada tipo de estabelecimento.</p>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section id="table">
+        <h2>Lista de imóveis</h2>
+        <div id="proptable" class="table-width shadow-z-1">
+            <div class='flex-inline'>
+                <div class="inline">
+                    Exibir
+                    <select id="select">
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> entradas
+                </div>
+                <div class="inline">
+                    <label for="search">Filtrar por:</label>
+                    <input type="text" id="search" name="search">
+                </div>
+            </div>
+            <div id="buttons"></div>
+            <table class="table table-hover table-mc-light-blue"></table>
+        </div>
+    </section>
+</div>
+</body>
+</html>

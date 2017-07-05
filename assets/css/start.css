@@ -1,0 +1,224 @@
+/* Inicio do css */
+body {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  color: #212121;
+  background-color: #f5f5f5;
+
+  // Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.table-width {
+  /*max-width: 800px;*/
+  margin: auto;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    background-color: #fff;
+}
+
+table.table thead th {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+table.table thead th:after {
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  display: block;
+}
+table.table thead th.desc:after {
+}
+table.table thead th.asc:after {
+}
+
+.table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+.table > thead > tr > th {
+    font-weight: 400;
+    color: #757575;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.table > thead > tr, .table > tbody > tr, .table > tfoot > tr {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    text-align: left;
+    padding: 2px 2px 2px 5px;
+    vertical-align: top;
+    border-top: 0;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.table-hover.table-mc-light-blue > tbody > tr:hover > td, .table-hover.table-mc-light-blue > tbody > tr:hover > th {
+    background-color: #b3e5fc;
+}
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.table > tbody > tr > td.t_left {
+  text-align: left;}
+.table > tbody > tr > td.t_center {
+  text-align: center;}
+.table > tbody > tr > td.t_right {
+  text-align: right;}
+.table > tbody > tr > td.t_justify {
+  text-align: justify;}
+
+.inline {
+  display: inline;
+}
+
+.flex-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+a.active_link {
+  font-weight: bold;
+  color: red;
+}
+
+.search_button, #select {
+  height: 26px;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+}
+.btn-breadcrumb a.active {
+    background-color: red  !important;
+}
+
+.fullwidth {
+    width: 100%;
+    height: 400px;
+}
+
+#proptable td {
+    white-space: nowrap;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.noheight {
+    height:0px;padding:0px;
+}
+
+.imgtxt {
+    float:right;padding-left: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+p {
+    text-align: justify;
+}
+
+/* Menu horizontal */
+section {
+    padding-top: 40px;
+}
+.navbar {
+    height: 40px;
+    min-height: inherit;
+}
+div.afternav {
+    height: 40px;
+}
+.btn-default.refactive{
+    color: #333;
+    background-color: #ebf0f3;
+    border-color: #adadad;
+}
+.btn-breadcrumb .btn.btn-default.refactive:not(:last-child):after {
+    border-left: 10px solid #ebf0f3;
+}
+.btn-breadcrumb .btn:not(:last-child):after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 10px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    left: 100%;
+    z-index: 3;
+}
+.btn-breadcrumb .btn:not(:last-child):before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 10px solid rgb(173, 173, 173);
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 3;
+}
+.btn-breadcrumb .btn {
+    padding:9px 12px 9px 24px;
+}
+.btn-breadcrumb .btn:first-child {
+    padding:9px 6px 9px 10px;
+}
+.btn-breadcrumb .btn:last-child {
+    padding:9px 18px 9px 24px;
+}
+
+/** Default button **/
+.btn-breadcrumb .btn.btn-default:not(:last-child):after {
+    border-left: 10px solid #fff;
+}
+.btn-breadcrumb .btn.btn-default:not(:last-child):before {
+    border-left: 10px solid #ccc;
+}
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):after {
+    border-left: 10px solid #ebebeb;
+}
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):before {
+    border-left: 10px solid #adadad;
+}
+/* */
